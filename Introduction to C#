@@ -1,0 +1,170 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab_Exercises
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*  double num1 = 23.5;
+              double num2 = 12.7;
+              double num3 = 5.6;
+              double num4 = (num1 + num2 + num3) / 3;
+              Console.WriteLine(num4);
+              Console.ReadKey();
+              string name = "lucy";
+              int age = 20;
+              Console.WriteLine("Hello {0}, you are {1} years old.", name, age);
+              Console.ReadKey();
+
+
+              int number;
+              string input;
+              Console.WriteLine("Enter Number:");
+              input = Console.ReadLine();
+              number = Convert.ToInt32(input);
+
+              Console.WriteLine("Number is : " + number);
+              Console.ReadKey();
+
+
+              // Ex 4
+              int number;
+              string input;
+              Console.WriteLine("Enter number");
+              input = Console.ReadLine();
+              number = Convert.ToInt32(input);
+              Console.WriteLine("Number is: " + number);
+
+              Console.Write("The outcome is: ");
+              if (number < 50)
+              {
+                  Console.WriteLine("fail");
+              }
+              else if (number < 60)
+              {
+                  Console.WriteLine("pass");
+              }
+              else if (number < 70)
+              {
+                  Console.WriteLine("Merit");
+              }
+              else
+              {
+                  Console.WriteLine("Distinction");
+              }
+              Console.ReadKey();
+
+
+            // 2c
+
+            int number;
+            string input;
+            int num_itr = 4;
+            int sum = 0;
+            for (int i=0; i<num_itr; i++)
+            {
+                Console.WriteLine("Enter Number :");
+                input = Console.ReadLine();
+                number = Convert.ToInt32(input);
+                //Console.WriteLine("The outcome is:");
+                sum += number;
+                Console.WriteLine("The outcome is:");
+                if (number < 50)
+                {
+                    Console.WriteLine("Fail");
+                }
+                else if (number < 60)
+                {
+                    Console.WriteLine("Pass");
+                }
+                else if (number < 70)
+                {
+                    Console.WriteLine("Merit");
+                }
+                else
+                {
+                    Console.WriteLine("Distinction");
+                }
+            }
+
+            double aver = sum / 4;
+            Console.WriteLine("The Average Outcome is : ");
+            if (aver < 50)
+            {
+                Console.WriteLine("Fail");
+            }
+            else if (aver < 60)
+            {
+                Console.WriteLine("Pass");
+            }
+            else if (aver < 70)
+            {
+                Console.WriteLine("Merit");
+            }
+            else
+            {
+                Console.WriteLine("Distinction");
+            }
+            Console.ReadKey();*/
+
+            int number;
+            string input;
+            int num_itr = 4;
+            int sum = 0;
+            double aver = 0;
+            double[] weight = { 0.2, 0.2, 0.15, 0.45 };
+            for (int i = 0; i < num_itr; i++)
+            {
+                Console.WriteLine("Enter Number :");
+                input = Console.ReadLine();
+                number = Convert.ToInt32(input);
+                //Console.WriteLine("The outcome is:");
+                sum += number;
+                Console.WriteLine("The outcome is:");
+                aver += number + weight[i];
+                if (number < 50)
+                {
+                    Console.WriteLine("Fail");
+                }
+                else if (number < 60)
+                {
+                    Console.WriteLine("Pass");
+                }
+                else if (number < 70)
+                {
+                    Console.WriteLine("Merit");
+                }
+                else
+                {
+                    Console.WriteLine("Distinction");
+                }
+            }
+
+            Console.WriteLine("The Average Outcome is : ");
+            if (aver < 50)
+            {
+                Console.WriteLine("Fail");
+            }
+            else if (aver < 60)
+            {
+                Console.WriteLine("Pass");
+            }
+            else if (aver < 70)
+            {
+                Console.WriteLine("Merit");
+            }
+            else
+            {
+                Console.WriteLine("Distinction");
+            }
+            Console.ReadKey();
+
+        }
+
+    }
+}
