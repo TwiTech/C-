@@ -1,0 +1,120 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Book
+{
+    class Person
+    {
+        private int age;
+        private string name;
+
+        public Person(string name)
+        {
+            this.name = name;
+            age = 18; //default age
+        }
+
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+
+        public string PrintDetails()
+        {
+            return "Name is: " + Name + ", Age is: " + Age;
+        }
+    }
+
+    class Book
+    {
+        private string title;
+        private Person author;
+        private int publicationYear;
+
+        public Book(string title)
+        {
+            this.title = title;
+            this.author = new Person("NULL");
+            this.publicationYear = 0;
+        }
+
+        public Book(string title, Person author)
+        {
+            this.title = title;
+            this.author = author;
+            this.publicationYear = 0;
+        }
+        public Book(string title, Person author, int publicationYear)
+        {
+            this.title = title;
+            this.author = author;
+            this.publicationYear = publicationYear;
+        }
+
+        public string Title
+        {
+            get { return title; }
+            set { title = value; }
+        }
+
+        public Person Author
+        {
+            get { return author; }
+            set { author = value; }
+        }
+
+        public int PublicationYear
+        {
+            get { return publicationYear; }
+            set { publicationYear = value; }
+        }
+        public string GetSummary()
+        {
+            return "Book Title is:" + Title + ", Author name is: " + author.Name + ", Author Age is: " + author.Age + ", Publication Year is: " + publicationYear;
+
+        }
+    }
+
+
+
+
+class Program
+    {
+            static void Main(string[] args)
+            {
+                Book[] books = new Book[4];  //declare an array of 3 Books
+
+                books[0] = new Book("Moby Dick");
+                books[0].Author = new Person("Herman Melville");
+                books[1] = new Book("The Creeping");
+
+                // Add 2 more books with authors
+                books[2] = new Book("The Great Gatsby", new Person("F. Scott Fitzgerald"));
+                books[3] = new Book("Pride and Prejudice", new Person("Jane Austen"));
+
+                for (int i = 0; i < 4; i++)
+                {
+                    Console.WriteLine(books[i].GetSummary());
+                }
+
+            }
+
+        }
+    }
+
